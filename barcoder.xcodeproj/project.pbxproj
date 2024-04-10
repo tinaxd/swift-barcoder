@@ -8,7 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		51129D7E2BC6CBCC006A9943 /* barcoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51129D7D2BC6CBCC006A9943 /* barcoder.swift */; };
+		51129D852BC6CBF0006A9943 /* code128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51129D842BC6CBF0006A9943 /* code128.swift */; };
+		51129D8F2BC6DB8D006A9943 /* barcoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51129D8E2BC6DB8D006A9943 /* barcoderTests.swift */; };
+		51129D902BC6DB8D006A9943 /* libbarcoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51129D7A2BC6CBCC006A9943 /* libbarcoder.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51129D912BC6DB8D006A9943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51129D722BC6CBCC006A9943 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51129D792BC6CBCC006A9943;
+			remoteInfo = barcoder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		51129D782BC6CBCC006A9943 /* CopyFiles */ = {
@@ -25,6 +38,9 @@
 /* Begin PBXFileReference section */
 		51129D7A2BC6CBCC006A9943 /* libbarcoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbarcoder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		51129D7D2BC6CBCC006A9943 /* barcoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcoder.swift; sourceTree = "<group>"; };
+		51129D842BC6CBF0006A9943 /* code128.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = code128.swift; sourceTree = "<group>"; };
+		51129D8C2BC6DB8D006A9943 /* barcoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barcoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51129D8E2BC6DB8D006A9943 /* barcoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcoderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51129D892BC6DB8D006A9943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51129D902BC6DB8D006A9943 /* libbarcoder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				51129D7C2BC6CBCC006A9943 /* barcoder */,
+				51129D8D2BC6DB8D006A9943 /* barcoderTests */,
 				51129D7B2BC6CBCC006A9943 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				51129D7A2BC6CBCC006A9943 /* libbarcoder.a */,
+				51129D8C2BC6DB8D006A9943 /* barcoderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +84,17 @@
 			isa = PBXGroup;
 			children = (
 				51129D7D2BC6CBCC006A9943 /* barcoder.swift */,
+				51129D842BC6CBF0006A9943 /* code128.swift */,
 			);
 			path = barcoder;
+			sourceTree = "<group>";
+		};
+		51129D8D2BC6DB8D006A9943 /* barcoderTests */ = {
+			isa = PBXGroup;
+			children = (
+				51129D8E2BC6DB8D006A9943 /* barcoderTests.swift */,
+			);
+			path = barcoderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +117,24 @@
 			productReference = 51129D7A2BC6CBCC006A9943 /* libbarcoder.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		51129D8B2BC6DB8D006A9943 /* barcoderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51129D932BC6DB8D006A9943 /* Build configuration list for PBXNativeTarget "barcoderTests" */;
+			buildPhases = (
+				51129D882BC6DB8D006A9943 /* Sources */,
+				51129D892BC6DB8D006A9943 /* Frameworks */,
+				51129D8A2BC6DB8D006A9943 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51129D922BC6DB8D006A9943 /* PBXTargetDependency */,
+			);
+			name = barcoderTests;
+			productName = barcoderTests;
+			productReference = 51129D8C2BC6DB8D006A9943 /* barcoderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +146,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					51129D792BC6CBCC006A9943 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					51129D8B2BC6DB8D006A9943 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -111,20 +167,48 @@
 			projectRoot = "";
 			targets = (
 				51129D792BC6CBCC006A9943 /* barcoder */,
+				51129D8B2BC6DB8D006A9943 /* barcoderTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51129D8A2BC6DB8D006A9943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51129D762BC6CBCC006A9943 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51129D852BC6CBF0006A9943 /* code128.swift in Sources */,
 				51129D7E2BC6CBCC006A9943 /* barcoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51129D882BC6DB8D006A9943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51129D8F2BC6DB8D006A9943 /* barcoderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51129D922BC6DB8D006A9943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51129D792BC6CBCC006A9943 /* barcoder */;
+			targetProxy = 51129D912BC6DB8D006A9943 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		51129D7F2BC6CBCC006A9943 /* Debug */ = {
@@ -272,6 +356,38 @@
 			};
 			name = Release;
 		};
+		51129D942BC6DB8D006A9943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LA4ZDDUB96;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = work.tinax.barcoderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51129D952BC6DB8D006A9943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LA4ZDDUB96;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = work.tinax.barcoderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -289,6 +405,15 @@
 			buildConfigurations = (
 				51129D822BC6CBCC006A9943 /* Debug */,
 				51129D832BC6CBCC006A9943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51129D932BC6DB8D006A9943 /* Build configuration list for PBXNativeTarget "barcoderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51129D942BC6DB8D006A9943 /* Debug */,
+				51129D952BC6DB8D006A9943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
