@@ -31,6 +31,14 @@ final class barcoderTests: XCTestCase {
         
         
     }
+    
+    func testAlternating() throws {
+        let encoder = try Barcoder(use_code_b: true)
+        let result = encoder.convert_to_widths(bytes: [1,1,0,1,0,0,0,1,0])
+        XCTAssertEqual(result.1,
+                    [2,1,1,3,1,1])
+        XCTAssertEqual(result.0, 1)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
